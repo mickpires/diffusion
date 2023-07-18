@@ -12,10 +12,8 @@ class Implicito:
                     matriz_coeficiente[i][j] = a
                     if i != 0:
                         matriz_coeficiente[i][j-1] = b
-                    try:
+                    if j+1 != column:
                         matriz_coeficiente[i][j+1] = b
-                    except IndexError:
-                        pass
         return matriz_coeficiente
 
     def gerarMatrizAmpliada(num_pontos,contorno,variavel,λ):
@@ -43,10 +41,8 @@ class CrankNicolson:
                     matriz_coeficiente[i][j] = a
                     if i != 0:
                         matriz_coeficiente[i][j-1] = b
-                    try:
+                    if j+1 != column:
                         matriz_coeficiente[i][j+1] = b
-                    except IndexError:
-                        pass
         return matriz_coeficiente
     
     def gerarMatrizAmpliada(num_pontos,contorno,variavel,λ):
